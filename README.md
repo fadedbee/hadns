@@ -21,6 +21,7 @@ Provided that your website:
 
 it may work for you.
 
+<br>
 
 The simplest installation:
 
