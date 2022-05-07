@@ -27,6 +27,8 @@ The simplest installation:
 
 - Two geographically-diverse internet servers.
 - Each server runs both HADNS and NGINX.
+- Any file-store must be rsync'd in both directions, between all servers, and must avoid clashing filenames.
+- Any database must be multi-master and eventually consistent.
 
 Its behaviour:
 
