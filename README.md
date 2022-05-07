@@ -5,6 +5,8 @@ A DNS server for very specific circumstances only.
 It is not suitable for 99% of use-cases, including *all* situations where eventual consistency is
 not good enough.
 
+Almost everyone is better-off using a commercial CDN, some of which have free tiers.
+
 
 Features and Requirements:
 
@@ -12,6 +14,7 @@ Features and Requirements:
 - It must be run on at least two geographically-diverse internet servers.
 - Each HADNS instance monitors multiple (identical) webservers.
 - The DNS replies exclude servers which are not currently proven to be working correctly.
+- If there are many possible servers, just a few of the nearest-to-the-asker will be sent.
 
 
 Provided that your website:
@@ -36,3 +39,4 @@ Its behaviour:
 - If either server's website fails, both HADNS servers will reply with just the working server's address.
 - If a server fails entirely, the single remaining server will reply with just the working server's address.
 - TTLs are dynamic, but always less than five minutes.
+
