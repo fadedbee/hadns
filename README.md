@@ -26,5 +26,8 @@ The simplest installation is:
 
 - Two geographically-diverse internet servers.
 - Each server runs HADNS and NGINX.
-- A DNS TTL of one minute.
 
+- When both are working, both HADNS servers will reply with with the address of both NGINX servers.
+- If either server's website fails, both HADNS servers will reply with just the working server.
+- If a server fails entirely, the single remaining server will reply with just the working server.
+- TTLs are dynamic, but always less than five minutes.
