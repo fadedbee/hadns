@@ -22,10 +22,12 @@ Provided that your website:
 it may work for you.
 
 
-The simplest installation is:
+The simplest installation:
 
 - Two geographically-diverse internet servers.
 - Each server runs HADNS and NGINX.
+
+Its behaviour:
 
 - When both are working, both HADNS servers will reply with with the address of both NGINX servers.
 - If either server's website fails, both HADNS servers will reply with just the working server.
