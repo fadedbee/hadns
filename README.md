@@ -26,11 +26,11 @@ it may work for you.
 The simplest installation:
 
 - Two geographically-diverse internet servers.
-- Each server runs HADNS and NGINX.
+- Each server runs both HADNS and NGINX.
 
 Its behaviour:
 
-- When both are working, both HADNS servers will reply with with the address of both NGINX servers.
-- If either server's website fails, both HADNS servers will reply with just the working server.
-- If a server fails entirely, the single remaining server will reply with just the working server.
+- When both are working, both HADNS servers will reply with with the addresses of both NGINX servers.
+- If either server's website fails, both HADNS servers will reply with just the working server's address.
+- If a server fails entirely, the single remaining server will reply with just the working server's address.
 - TTLs are dynamic, but always less than five minutes.
